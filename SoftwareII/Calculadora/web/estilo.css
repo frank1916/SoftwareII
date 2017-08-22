@@ -1,0 +1,38 @@
+body{
+    font-family: arial black;
+    font-size: 20px;  
+}
+
+#operaciones{
+    margin: 5px 25px;
+}
+#principal{
+    width: 350px;
+    border: solid 1px;
+    /*background: #BDBDBF;*/
+    background:  #238E68;
+    margin: auto;
+}
+
+input{
+    width: 70px;
+    height: 70px;
+    margin: 5px 0;
+    font-size: 30px;
+}
+
+button{
+    width: 90px;
+    height: 70px;
+    margin: 5px 0;
+    font-size: 30px;
+}
+.del{
+    width: 223px;
+    margin: auto;
+}
+
+.numero{
+    background: #666;
+    color:#FFF;
+}

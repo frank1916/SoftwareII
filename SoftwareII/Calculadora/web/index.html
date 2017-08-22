@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculadora</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="estilo.css">
+        <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+            var b, c = 0, d;
+            function escribir(valor) {
+                document.getElementById('texto').value += valor;
+            }
+            function limpiar() {
+                document.getElementById('texto').value = '';
+            }
+
+            function resultado() {
+                var resultado = 0;
+                resultado = document.getElementById('texto').value;
+                document.getElementById('texto').value = '';
+                document.getElementById('texto').value = eval(resultado);     
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="principal">
+            <center><label>Calculadora</label>
+
+                <input type="text" id="texto" style="width: 98%; text-align: right; height: 50px; border: solid"/></center>
+            <div id="operaciones">
+                <input type="button" value="%" onclick="escribir('%')"/>
+                <input type="button" value="&radic;" onclick="escribir('')"/>
+                <input type="button" value="x^2" onclick="escribir('^2')"/> 
+                <input type="button" value="1/x" onclick="escribir('1/x')"/>
+                <input type="button" class="del" value="BORRAR" onclick="limpiar()"> 
+                <input type="button" value="/" onclick="escribir('/')"/>                
+                <input type="button" class = "numero" value="7" onclick="escribir('7')"/>
+                <input type="button" class = "numero" value="8" onclick="escribir('8')"/>
+                <input type="button" class = "numero" value="9" onclick="escribir('9')"/>
+                <input type="button" value="*" onclick="escribir('*')"/>
+                <input type="button" class = "numero" value="4" onclick="escribir('4')"/>
+                <input type="button" class = "numero" value="5" onclick="escribir('5')"/>
+                <input type="button" class = "numero" value="6" onclick="escribir('6')"/>
+                <input type="button" value="-" onclick="escribir('-')"/>
+                <input type="button" class = "numero" value="1" onclick="escribir('1')"/>
+                <input type="button" class = "numero" value="2" onclick="escribir('2')"/>
+                <input type="button" class = "numero" value="3" onclick="escribir('3')"/>
+                <input type="button" value="+" onclick="escribir('+')"/>
+                <input type="button" value="&plusmn;" onclick="escribir('-')"/>
+                <input type="button" class = "numero" value="0" onclick="escribir('0')"/>
+                <input type="button" value="." onclick="escribir('.')"/>
+                <input type="button" value="=" onclick="resultado();"/>
+            </div>
+        </div>                
+    </body>
+</html>
