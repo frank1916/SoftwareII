@@ -3,13 +3,14 @@ body{
     font-size: 20px;  
 }
 
+
 #operaciones{
     margin: 5px 25px;
 }
+
 #principal{
     width: 350px;
     border: solid 1px;
-    /*background: #BDBDBF;*/
     background:  #238E68;
     margin: auto;
 }
@@ -36,3 +37,4 @@ button{
     background: #666;
     color:#FFF;
 }
+
