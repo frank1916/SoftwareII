@@ -19,18 +19,20 @@ public class Instancia {
         try {
             return (Ascensor) newInstancia(Ascensor.class);
         } catch (Exception e) {
-            throw new RuntimeException("No_se_pudo_crear_nueva_instancia_de_la_clase " + e);
+            throw new RuntimeException("No_se_pudo_crear_nueva_instancia_de_la_clase " , e);
         }
     }
 
     public static Object newInstancia(Class clase) throws Exception {
+  
         File src = new File("src");
-        File f = new File(src, clase.getCanonicalName().replaceAll("\\.", "/") + "Proxy.java");
-
+        File f = new File(src, clase.getCanonicalName().replaceAll("\\.", "/") 
+                + "Proxy.java");
+         
         StringBuilder sb = new StringBuilder();
         sb.append("package " + clase.getPackage().getName() + ";");
         sb.append("public class " + clase.getSimpleName() + "Proxy extends " + clase.getSimpleName() + "{");
-
+      
         for (Method metodo : clase.getDeclaredMethods()) {
             if (metodo.getAnnotations() != null) {
                 sb.append(modifierFromString(metodo.getModifiers()) + " "
