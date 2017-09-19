@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Autenticar Usuarios.
  * @author 
- */
-@WebFilter(filterName = "FiltroAutenticacion", urlPatterns = {"/index.html","/ProcesarFormulario"})
+ */@WebFilter(filterName = "FiltroAutenticacion", urlPatterns = {"/Taller_3/login.html","/Taller_3/ProcesarLogin"})
+//@WebFilter(filterName = "FiltroAutenticacion", urlPatterns = {"/index.html","/ProcesarFormulario"})
 public class FiltroAutenticacion implements Filter {
 
     @Override
@@ -30,7 +30,7 @@ public class FiltroAutenticacion implements Filter {
         HttpServletResponse resp = (HttpServletResponse) response;
         if (req.getSession().getAttribute("usuario")==null){
             //no esta autentidcado
-//            resp.sendRedirect("./login.html");    
+            resp.sendRedirect("Taller_3/login.html");    
         }else{
             //esta autenticado
             chain.doFilter(request, response);
