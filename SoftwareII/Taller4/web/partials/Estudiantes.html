@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <div class="btn-group">
     <button type="button" class="btn btn-default" ng-click="nuevo()">Nuevo Estudiante</button>
     <button type="button" class="btn btn-default" ng-click="cancelar()">Listar Estudiantes</button>
@@ -41,7 +40,7 @@
                 <td>{{row.codigo}}</td>
                 <td>{{row.documento}}</td>
                 <td>{{row.fechaNac}}</td>
-                
+
                 <td class="row">{{row.carrera.nombre}}</td>
                 <td class="row">{{row.municipio.nombre}}</td>
                 <td class="row">
@@ -94,7 +93,7 @@
                            type="text"
                            ng-model="datosFormulario.documento"
                            placeholder="documento"/>
-                </div> 
+                </div>
                 <div class="form-group col-md-6" ng-class="errores.idAseg ? 'error' : ''">
                     <label>carrera</label>
                     <select id="carrera" class="form-control" 
@@ -110,8 +109,23 @@
                             ng-options="option.nombre for option in listaMunicipio track by option.id">
                     </select>
                     <div ng-show="errores.municipio">{{errores.municipio}}</div>
-                </div>
+                </div>  
+                <div class="form-group col-md-6" ng-class="errores.fechaNac ? 'error' : ''">
+                    <script>
+                        $(function () {
+                        $("#fecha").datepicker();
+                        });
+                    </script>
+                    <label for="fechaNac">fecha Nacimiento</label>
+                    <input  id="fecha" 
+                            class="form-control"
+                            type="text"
+                            ng-model="datosFormulario.fechaNac"
+                            placeholder="fechaNac"/>
+                </div> 
+
             </div> 
+
 
             <div class="btn-group">
                 <button type="button" class="btn btn-default" ng-click="guardar()">Aceptar</button>
@@ -120,5 +134,6 @@
         </form>
     </div>
 </div>
+
 
 

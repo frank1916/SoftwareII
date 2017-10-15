@@ -1,3 +1,5 @@
+package taller_2;
+
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -13,6 +15,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 public @interface InvocacionMultiple {
     
-    int vecesInvocar() default 1;
+   int vecesAInvocar() default 1;
     
 }

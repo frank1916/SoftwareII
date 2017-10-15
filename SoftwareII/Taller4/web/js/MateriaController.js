@@ -2,11 +2,12 @@
 
 module.controller('MateriaCtrl', ['$scope', '$filter', '$http', function ($scope, $filter, $http) {
         //listar
-        $scope.lista = Materia;
+        $scope.lista = materia;
         $scope.datosFormulario = {};
         $scope.panelEditar = false;
         $scope.listaCarrera = carreras;
         $scope.listaProfesor = Profesor;
+        $scope.listaHorario = horario;
 
 
         //guardar

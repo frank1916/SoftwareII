@@ -1,6 +1,4 @@
 'use strict';
-
-
 // Declare app level module which depends on filters, and services
 var app=angular.module('adminUniversidad', [
   'ngRoute',
@@ -14,7 +12,10 @@ app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/Estudiantes',{templateUrl: 'partials/Estudiantes.html', controller: 'EstudiantesCtrl'});
 	$routeProvider.when('/Materia',{templateUrl: 'partials/Materia.html', controller: 'MateriaCtrl'});
        	$routeProvider.when('/Profesor',{templateUrl: 'partials/Profesor.html', controller: 'ProfesorCtrl'});
+        $routeProvider.when('/Horario',{templateUrl: 'partials/Horario.html', controller: 'HorarioCtrl'});
+        $routeProvider.when('/Matricula',{templateUrl: 'partials/Matricula.html', controller: 'MatriculaCtrl'});
         $routeProvider.otherwise({redirectTo: '/'}); 
 }]);
+
 
 var module=angular.module("adminUniversidad.controllers",[]);

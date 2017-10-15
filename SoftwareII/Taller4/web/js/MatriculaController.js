@@ -1,13 +1,29 @@
 'use strict';
 
-module.controller('EstudiantesCtrl', ['$scope', '$filter', '$http', function ($scope, $filter, $http) {
-        
+module.controller('MatriculaCtrl', ['$scope', '$filter', '$http', function ($scope, $filter, $http) {
         //listar
-        $scope.lista = estudiantes;
+        $scope.lista = matricula;
         $scope.datosFormulario = {};
         $scope.panelEditar = false;
-        $scope.listaCarrera = carreras;
-        $scope.listaMunicipio = municipios;
+        $scope.listaMateria = materia;
+        $scope.listaMateriaMod = materia;
+        $scope.listaEstudiante = estudiantes;
+
+        $scope.validarCarrera = function () {
+            
+           $scope.listaMateria = $scope.listaMateriaMod;
+           $scope.listaMateriaTmp = new Array();
+           
+            for (var i = 0; i< $scope.listaMateria.length; i++){
+                if ( $scope.datosFormulario.estudiante.carrera.nombre==$scope.listaMateria[i].carrera.nombre){
+                  $scope.listaMateriaTmp.push($scope.listaMateria[i]);
+                } 
+            }
+//              alert( $scope.listaMateriaTmp.length); 
+              
+              $scope.listaMateria = $scope.listaMateriaTmp;
+                 
+        };
 
         //guardar
         $scope.nuevo = function () {
@@ -18,11 +34,12 @@ module.controller('EstudiantesCtrl', ['$scope', '$filter', '$http', function ($s
         $scope.guardar = function () {
             var index = $scope.lista.indexOf($scope.datosFormulario);
             if (index === -1) {
-                $scope.datosFormulario.id=idEstudiantes++;
+                $scope.datosFormulario.id = idMatricula++;
                 $scope.lista.push($scope.datosFormulario);
             }
             $scope.panelEditar = false;
         };
+
         $scope.cancelar = function () {
             $scope.panelEditar = false;
             $scope.datosFormulario = {};
@@ -42,6 +59,5 @@ module.controller('EstudiantesCtrl', ['$scope', '$filter', '$http', function ($s
                 }
             }
         };
-      
+
     }]);
-  

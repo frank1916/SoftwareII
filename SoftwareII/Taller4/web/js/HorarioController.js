@@ -1,13 +1,12 @@
 'use strict';
 
-module.controller('EstudiantesCtrl', ['$scope', '$filter', '$http', function ($scope, $filter, $http) {
+module.controller('HorarioCtrl', ['$scope', '$filter', '$http', function ($scope, $filter, $http) {
         
         //listar
-        $scope.lista = estudiantes;
+        $scope.lista = horario;
         $scope.datosFormulario = {};
         $scope.panelEditar = false;
-        $scope.listaCarrera = carreras;
-        $scope.listaMunicipio = municipios;
+        $scope.listaMateria = materia;
 
         //guardar
         $scope.nuevo = function () {
@@ -18,7 +17,7 @@ module.controller('EstudiantesCtrl', ['$scope', '$filter', '$http', function ($s
         $scope.guardar = function () {
             var index = $scope.lista.indexOf($scope.datosFormulario);
             if (index === -1) {
-                $scope.datosFormulario.id=idEstudiantes++;
+                $scope.datosFormulario.id=idHorario++;
                 $scope.lista.push($scope.datosFormulario);
             }
             $scope.panelEditar = false;

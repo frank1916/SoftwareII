@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html ng-app="adminUniversidad">
     <head>
-        <title>Aplicaci&oacute;n Universidad</title>        
+        <title>Aplicaci&oacute;n Universidad</title>  
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +10,20 @@
         <link href="./css/main.css" rel="stylesheet">
 
         <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
-        <script src="./js/lib/utils.js"></script>
+        <script src="./js/l}ib/utils.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+        <script type ="text/javascript" src ="js/bootstrap-multiselect.js"></script>
+        <link rel="stylesheet" href="css/bootstrap-multiselect.css" />
 
     </head>
+
+
     <body>
         <div class="content">
-            <div class="content-header">
+            <div class="content-header"> 		
                 <nav class="navbar navbar-default" role="navigation">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -40,6 +49,8 @@
                                     <li><a href="#/Estudiantes">Estudiantes</a></li>
                                     <li><a href="#/Materia">Materias</a></li>
                                     <li><a href="#/Profesor">Profesores</a></li>
+                                    <li><a href="#/Horario">Horario</a></li>
+                                    <li><a href="#/Matricula">Matricula</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -58,7 +69,6 @@
         <script src="http://www.donatosoft.com/libjs/bootstrap-datepicker.es.min.js"></script>
         <script src="http://www.donatosoft.com/libjs/dirpaginate.js"></script>
 
-
         <script src="./js/Modelo.js"></script>
         <script src="./js/RouteProvider.js"></script>
 
@@ -68,6 +78,7 @@
         <script src="./js/EstudiantesController.js"></script>
         <script src="./js/MateriaController.js"></script>
         <script src="./js/ProfesorController.js"></script>
+        <script src="./js/HorarioController.js"></script>
+        <script src="./js/MatriculaController.js"></script>
     </body>
 </html>
-
