@@ -27,6 +27,7 @@ public class ApplicationConfig extends Application {
         resources.add(co.edu.uptc.sw2.taller5.servicio.MatriculaServicio.class);
         resources.add(co.edu.uptc.sw2.taller5.servicio.MunicipioServicio.class);
         resources.add(co.edu.uptc.sw2.taller5.servicio.ProfesorServicio.class);
+        //cambiar de Jackson a Gson--> mas eficiente.
         resources.add(org.netbeans.rest.application.config.GsonMessageBodyHandler.class);
     }
 

@@ -39,7 +39,11 @@ and open the template in the editor.
                 <td>{{row.nombre}}</td>
                 <td>{{row.creditos}}</td>
                 <td class="row">{{row.carrera.nombre}}</td>
-                <td class="row">{{row.horario.dia_semana+":"+row.horario.hora_inicio+":"+row.horario.hora_fin}}</td>
+                <td class="row">
+                    <div ng-repeat="horario in row.horario"><div >
+                    {{horario.dia_semana+":"+horario.hora_inicio+":"+horario.hora_fin}}</div></div></td>
+                    
+                <!--<td class="row">{{rowrow.horario}}</td>-->
                 <td class="row">{{row.profesor.nombre}}</td>
 
 
@@ -98,6 +102,7 @@ and open the template in the editor.
                                             $('#horarios').multiselect();
                                         });
                             </script>
+                           
                         </select>
                     </div>
                 </div>

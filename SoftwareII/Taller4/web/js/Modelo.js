@@ -27,8 +27,8 @@ var estudiantes=[
 
 var idMateria=3;
 var materia=[
-    {"id":1, "nombre":"software 2", "creditos":4, "carrera":{"id":1, "nombre":"Sistemas"},"profesor":{"id":1, "nombre":"jorge", "apellido":"otalora", "documento":"100000000"},"horario":{"id":1, "dia_semana":3, "hora_inicio":10, "hora_fin":12}},
-    {"id":2, "nombre":"suelos", "creditos":3,"carrera":{"id":2, "nombre":"Ambiental"},"profesor":{"id":2, "nombre":"mauricio", "apellido":"villate", "documento":"2000000"},"horario":{"id":2, "dia_semana":5, "hora_inicio":2, "hora_fin":4}}
+    {"id":1, "nombre":"software 2", "creditos":4, "carrera":{"id":1, "nombre":"Sistemas"},"profesor":{"id":1, "nombre":"jorge", "apellido":"otalora", "documento":"100000000"},"horario":[{"id":1, "dia_semana":3, "hora_inicio":10, "hora_fin":12},{"id":1, "dia_semana":3, "hora_inicio":10, "hora_fin":12}]},
+    {"id":2, "nombre":"suelos", "creditos":3,"carrera":{"id":2, "nombre":"Ambiental"},"profesor":{"id":2, "nombre":"mauricio", "apellido":"villate", "documento":"2000000"},"horario":[{"id":2, "dia_semana":5, "hora_inicio":2, "hora_fin":4}]}
 ];
 
 var idProfesor=2;
