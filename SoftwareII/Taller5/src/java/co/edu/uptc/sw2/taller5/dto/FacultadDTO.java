@@ -1,8 +1,5 @@
 package co.edu.uptc.sw2.taller5.dto;
 
-import java.util.List;
-import java.util.ArrayList;
-import javax.xml.bind.annotation.XmlRootElement;
 
 public class FacultadDTO {
 

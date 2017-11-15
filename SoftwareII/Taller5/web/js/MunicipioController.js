@@ -41,14 +41,12 @@ module.controller('MunicipioCtrl', ['$scope', '$filter', '$http', function ($sco
         $scope.cancelar = function () {
             $scope.panelEditar = false;
             $scope.datosFormulario = {};
-            
         };
 
         //editar
         $scope.editar = function (data) {
             $scope.panelEditar = true;
             $scope.datosFormulario = data;
-            
         };
         //eliminar
         $scope.eliminar = function (data) {
